@@ -39,7 +39,7 @@ public class BookContoller {
     @PostMapping("/books/search")
     public List<Book> search(@RequestBody Map<String, String> body){
         String searchTerm = body.get("text");
-        return bookRepository.findByTitleContainingOrContentContaining(searchTerm, searchTerm);
+        return bookRepository.findByTitleContainingOrAuthorContaining(searchTerm, searchTerm);
     }
 
     @PutMapping("/books/{id}")

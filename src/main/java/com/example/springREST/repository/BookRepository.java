@@ -9,6 +9,6 @@ import com.example.springREST.entity.Book;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Integer> {
-    List<Book> findByTitleContainingOrContentContaining(String text, String textAgain);
+    List<Book> findByTitleContainingOrAuthorContaining(String text, String textAgain);
     
 }
